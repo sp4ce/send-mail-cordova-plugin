@@ -16,24 +16,8 @@
 
     <!-- android -->
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="SendMail">
-                <param name="android-package" value="com.plugin.sendmail.SendMail"/>
-            </feature>
-        </config-file>
-
-        <header-file src="src/ios/GMailSender.h" />
-        <source-file src="src/ios/GMailSender.m" />
-        <header-file src="src/ios/GMailSenderDelegate.h" />
-        <source-file src="src/ios/GMailSenderDelegate.m" />
-        <header-file src="src/ios/SendMail.h" />
-        <source-file src="src/ios/SendMail.m" />
-
         <framework src="Pantomime.framework" />
-    </platform>
 
-    <!-- ios -->
-    <platform name="ios">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="SendMail">
                 <param name="ios-package" value="SendMail"/>
@@ -47,5 +31,21 @@
         <source-file src="src/android/JSSEProvider.java" target-dir="src/com/plugin/sendmail" />
         <source-file src="src/android/GMailSender.java" target-dir="src/com/plugin/sendmail" />
         <source-file src="src/android/SendMail.java" target-dir="src/com/plugin/sendmail" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SendMail">
+                <param name="android-package" value="com.plugin.sendmail.SendMail"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/GMailSender.h" />
+        <source-file src="src/ios/GMailSender.m" />
+        <header-file src="src/ios/GMailSenderDelegate.h" />
+        <source-file src="src/ios/GMailSenderDelegate.m" />
+        <header-file src="src/ios/SendMail.h" />
+        <source-file src="src/ios/SendMail.m" />
     </platform>
 </plugin>
