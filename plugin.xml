@@ -22,6 +22,24 @@
             </feature>
         </config-file>
 
+        <header-file src="src/ios/GMailSender.h" />
+        <source-file src="src/ios/GMailSender.m" />
+        <header-file src="src/ios/GMailSenderDelegate.h" />
+        <source-file src="src/ios/GMailSenderDelegate.m" />
+        <header-file src="src/ios/SendMail.h" />
+        <source-file src="src/ios/SendMail.m" />
+
+        <framework src="Pantomime.framework" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SendMail">
+                <param name="ios-package" value="SendMail"/>
+            </feature>
+        </config-file>
+
         <source-file src="src/android/libs/activation.jar" target-dir="libs" framework="true"/>
         <source-file src="src/android/libs/additionnal.jar" target-dir="libs" framework="true"/>
         <source-file src="src/android/libs/httpmime-4.0.jar" target-dir="libs" framework="true"/>
