@@ -16,8 +16,6 @@
 
     <!-- android -->
     <platform name="android">
-        <framework src="Pantomime.framework" />
-
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="SendMail">
                 <param name="android-package" value="SendMail"/>
@@ -47,5 +45,7 @@
         <source-file src="src/ios/GMailSenderDelegate.m" />
         <header-file src="src/ios/SendMail.h" />
         <source-file src="src/ios/SendMail.m" />
+
+        <framework src="Pantomime.framework" />
     </platform>
 </plugin>
