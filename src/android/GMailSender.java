@@ -1,4 +1,4 @@
-package com.autentia.plugin.sendmail;
+package com.plugin.sendmail;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

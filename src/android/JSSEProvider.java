@@ -1,4 +1,4 @@
-package com.autentia.plugin.sendmail;
+package com.plugin.sendmail;
 
 import java.security.AccessController;
 import java.security.Provider;
@@ -6,7 +6,7 @@ import java.security.Provider;
 public final class JSSEProvider extends Provider {
 
     /**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 

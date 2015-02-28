@@ -1,4 +1,4 @@
-package com.autentia.plugin.sendmail;
+package com.plugin.sendmail;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;

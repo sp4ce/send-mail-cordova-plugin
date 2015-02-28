@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    id="com.autentia.plugin.sendmail"
+    id="com.plugin.sendmail"
     version="0.1.0">
 
     <name>PluginSendMail</name>
@@ -18,7 +18,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="SendMail">
-                <param name="android-package" value="com.autentia.plugin.sendmail.SendMail"/>
+                <param name="android-package" value="com.plugin.sendmail.SendMail"/>
             </feature>
         </config-file>
 
@@ -44,8 +44,8 @@
         <source-file src="src/android/libs/additionnal.jar" target-dir="libs" framework="true"/>
         <source-file src="src/android/libs/httpmime-4.0.jar" target-dir="libs" framework="true"/>
         <source-file src="src/android/libs/mail.jar" target-dir="libs" framework="true"/>
-        <source-file src="src/android/JSSEProvider.java" target-dir="src/com/autentia/plugin/sendmail" />
-        <source-file src="src/android/GMailSender.java" target-dir="src/com/autentia/plugin/sendmail" />
-        <source-file src="src/android/SendMail.java" target-dir="src/com/autentia/plugin/sendmail" />
+        <source-file src="src/android/JSSEProvider.java" target-dir="src/com/plugin/sendmail" />
+        <source-file src="src/android/GMailSender.java" target-dir="src/com/plugin/sendmail" />
+        <source-file src="src/android/SendMail.java" target-dir="src/com/plugin/sendmail" />
     </platform>
 </plugin>
