@@ -15,7 +15,6 @@
 @interface SimpleSMTP : NSObject
 {
     @private
-        CWSMTP *_smtp;
         NSString *_user;
         NSString *_password;
 }
@@ -40,20 +39,24 @@
     _password = p;
 }
 
-- (void) applicationDidFinishLaunching: (NSNotification *) theNotification
+- (void) applicationDidFinishLaunching: (NSNotification *) notification
 {
-    // create a new instance
-    GMailSender *gmailSender = [[GMailSender alloc] init];
-
-    // set the values
-    [gmailSender setUser: _user];
-    [gmailSender setPassword: _password];
+    // Create a new instance.
+    GMailSender *gmailSender =
+    [
+        [GMailSender alloc] initWithDelegate:
+        [
+            [GMailSenderDelegate alloc]
+            initWithUser: _user
+            password: _password
+        ]
+    ];
 
     // Send the mail.
     [gmailSender send: [NSString stringWithFormat:@"%s", "This is a test"]
         to: [NSString stringWithFormat:@"%s" , "bapt@sp4ce.net"]
         subject: [NSString stringWithFormat:@"%s" , "test subject"]
-        from: [NSString stringWithFormat:@"%s" , "macholandapp@gmail.com"]
+        from: [NSString stringWithFormat:@"%s" , _user]
         attach: [NSString stringWithFormat:@"%s" , "/home/baptiste/Desktop/macholand.png"]];
 }
 

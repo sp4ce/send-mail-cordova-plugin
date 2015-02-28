@@ -1,14 +1,13 @@
 #import <Pantomime/Pantomime.h>
 
+#import "GMailSenderDelegate.h"
+
 @interface GMailSender : NSObject {
     @private
-        CWSMTP *_smtp;
-        NSString* _user;
-        NSString* _password;
+        GMailSenderDelegate* _delegate;
 }
 
--(void) setUser: (NSString*) u;
--(void) setPassword: (NSString*) p;
+-(id) initWithDelegate: (GMailSenderDelegate*) delegate;
 
 -(void) send: (NSString*) body
     to: (NSString*) recipients
