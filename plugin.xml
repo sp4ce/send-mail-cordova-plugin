@@ -20,7 +20,7 @@
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="SendMail">
-                <param name="ios-package" value="SendMail"/>
+                <param name="android-package" value="SendMail"/>
             </feature>
         </config-file>
 
@@ -37,7 +37,7 @@
     <platform name="ios">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="SendMail">
-                <param name="android-package" value="com.plugin.sendmail.SendMail"/>
+                <param name="ios-package" value="com.plugin.sendmail.SendMail"/>
             </feature>
         </config-file>
 
