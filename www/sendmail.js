@@ -5,14 +5,7 @@ var sendmail = {
             errorCallback,
             "SendMail",
             "send",
-            [{
-                 "subject":subject,
-                 "body":body,
-                 "sender":sender,
-                 "password":password,
-                 "recipients":recipients,
-                 "attachment": attachment,
-            }]
+            [subject, body, sender, password, recipients, attachment]
         );
     }
 }
